@@ -1,0 +1,12 @@
+get:
+	costNewCar
+	milesYearly
+	priceGallon
+	mpg
+	priceResale
+
+make:
+	costTotal
+	= costNewCar - priceResale + ((milesYearly / mpg) * priceGallon)
+
+test later
