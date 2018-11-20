@@ -4,12 +4,8 @@ public class P7_19 {
 		FULL = "@@",
 		EMPTY = "  ",
 		HALF_BOT = "..",
-		HALF_TOP = "''",
-		ERROR = "??";
+		HALF_TOP = "''";
 
-	interface Function {
-		double eval (double x);
-	}
 
 	public static void main (String[] args) {
 
@@ -17,8 +13,8 @@ public class P7_19 {
 
 		/* this program can graph other functions. here are some examples: */
 		//f = x -> 1 / x;
+		//f = x -> Math.sqrt (x);
 		//f = x -> Math.pow (x, 2) / (x - 6);
-		f = x -> Math.sqrt (x);
 		//f = x -> { if (x < 1) return x; else return 0.1 * Math.pow (Math.E, x); };
 
 		int plotSizeX = 100; // plot size in terms of character things, not the actual numeric value
@@ -27,6 +23,10 @@ public class P7_19 {
 
 		graph (f, scale, plotSizeX, plotSizeY);
 
+	}
+
+	interface Function {
+		double eval (double x);
 	}
 
 	// scale is width per pixel
@@ -53,13 +53,11 @@ public class P7_19 {
 
 			double y;
 
-			try {
+			try { y = f.eval (x - halfScale); }
 
-				y = f.eval (x - halfScale);
+			catch (ArithmeticException e) { row.append (EMPTY); continue; }
 
-			}
-
-			catch (ArithmeticException e) { row.append (ERROR); continue; }
+			if (Double.isNaN (y)) { row.append (EMPTY); continue; }
 
 			// not abs
 			double dif = (y > 0) ? y - c : c - y;

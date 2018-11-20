@@ -18,7 +18,7 @@ public class E7_17 {
 	}
 
 	static class Table {
-		
+
 		private int[][] values;
 
 		public Table (int rows, int columns) { values = new int[rows][columns]; }

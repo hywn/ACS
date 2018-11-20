@@ -35,6 +35,7 @@ public class E7_10 {
 		// i
 		test ("I", s5, a -> System.out.println (a.hasAdjDuplicates ()), "false");
 		test ("I", new int[] { 1, 2, 2, 4, 5 }, a -> System.out.println (a.hasAdjDuplicates ()), "true");
+		test ("I", new int[] { 1, 2, 3, 4, 2 }, a -> System.out.println (a.hasAdjDuplicates ()), "false");
 
 		// j
 		test ("J", s5, a -> System.out.println (a.hasDuplicates ()), "false");
