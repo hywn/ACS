@@ -62,9 +62,7 @@ public class P7_19 {
 			// not abs
 			double dif = (y > 0) ? y - c : c - y;
 
-			// if the real value is closer to zero AND it doesn't go over
 			if (dif >= halfScale && dif <= Math.abs (y)) row.append (FULL);
-				//else row.append (' ');
 			else if (dif <= 0 || dif >= Math.abs (y)) row.append (EMPTY);
 			else row.append ((y > 0) ? HALF_BOT : HALF_TOP);
 
