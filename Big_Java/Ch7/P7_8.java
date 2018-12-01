@@ -11,7 +11,7 @@ public class P7_8 {
 		char[][] board = new char[SIZE][SIZE];
 		for (int i = 0; i < SIZE; i++) for (int j = 0; j < SIZE; j++) board[i][j] = BLANK; // fill board with blanks
 
-		final char[] PLAYERS = { 'X', 'O' }; // can add any number more players
+		final char[] PLAYERS = { 'O', 'X' }; // can add any number more players
 		int turn = 0;
 		char winner;
 
