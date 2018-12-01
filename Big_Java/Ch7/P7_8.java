@@ -16,7 +16,7 @@ public class P7_8 {
 
 		for (int i = 0; i < SIZE; i++) for (int j = 0; j < SIZE; j++) board[i][j] = '-';
 
-		final char[] PLAYERS = { 'X', 'O' };
+		final char[] PLAYERS = { 'O', 'X' };
 		int turn = 0;
 
 		char winner;
