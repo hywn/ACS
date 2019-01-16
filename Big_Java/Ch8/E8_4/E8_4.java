@@ -4,12 +4,12 @@ public class E8_4 {
 
 		BankAccount b = new BankAccount ();
 
-		b = b.deposit (25); // $25
+		b = b.deposit (25); // $25, 1st transaction
 
 		System.out.println (b);
 
-		b = b.withdraw (5);// $20
-		b.deposit (10); // still $20 because BankAccount is immutable
+		b = b.withdraw (5);// $20, 2nd transaction
+		b.deposit (10); // still $20, 2nd transaction because BankAccount is immutable
 
 		System.out.println (b);
 
